@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+Sitemap: https://kambohassociates.com/sitemap.xml
+
+# Allow search engines to crawl important content
+Allow: /tools/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+
+# Specific rules for common bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
