@@ -156,12 +156,12 @@ export default function SalaryCalculatorPage() {
                       : 'bg-white border-border hover:border-gold/30'
                   }`}
                 >
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${item.highlight ? 'bg-gold/20' : (item.label.includes('Take-Home') ? 'bg-green/10' : 'bg-muted')}`}>
-                    <item.icon className={`w-7 h-7 ${item.highlight ? 'text-gold' : (item.label.includes('Take-Home') ? 'text-green' : 'text-gold-dark')}`} />
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${item.highlight ? 'bg-gold/20' : (item.label.includes('Take-Home') ? 'bg-gold/10' : 'bg-muted')}`}>
+                    <item.icon className={`w-7 h-7 ${item.highlight ? 'text-gold' : (item.label.includes('Take-Home') ? 'text-gold' : 'text-gold-dark')}`} />
                   </div>
                   <div className="flex-1">
                     <p className={`text-xs font-black uppercase tracking-widest mb-1 ${item.highlight ? 'text-gray-400' : 'text-gray-400'}`}>{item.label}</p>
-                    <p className={`text-3xl font-black ${item.highlight ? 'text-gold' : (item.label.includes('Take-Home') ? 'text-green' : 'text-primary')}`}>
+                    <p className={`text-3xl font-black ${item.highlight ? 'text-gold' : (item.label.includes('Take-Home') ? 'text-gold' : 'text-primary')}`}>
                       {salary > 0 ? fmt(item.val) : 'Rs. —'}
                     </p>
                   </div>
@@ -211,7 +211,7 @@ export default function SalaryCalculatorPage() {
                           )}
                         </td>
                         <td className="px-8 py-5 text-center">
-                          <span className={`font-black text-lg ${slab.rate === 0 ? 'text-green-600' : 'text-primary'}`}>
+                          <span className={`font-black text-lg ${slab.rate === 0 ? 'text-gold-600' : 'text-primary'}`}>
                             {(slab.rate * 100).toFixed(0)}%
                           </span>
                         </td>

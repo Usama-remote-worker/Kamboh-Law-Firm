@@ -56,9 +56,9 @@ export default function InvestmentCalculator() {
                     type="number"
                     value={rate}
                     onChange={e => setRate(e.target.value)}
-                    className="w-full pl-6 pr-12 py-5 border-2 border-border rounded-2xl text-2xl font-black text-primary focus:outline-none focus:border-green transition-all"
+                    className="w-full pl-6 pr-12 py-5 border-2 border-border rounded-2xl text-2xl font-black text-primary focus:outline-none focus:border-gold transition-all"
                   />
-                  <span className="absolute right-6 top-1/2 -translate-y-1/2 font-black text-green text-xl">%</span>
+                  <span className="absolute right-6 top-1/2 -translate-y-1/2 font-black text-gold text-xl">%</span>
                 </div>
               </div>
               <div>
@@ -69,7 +69,7 @@ export default function InvestmentCalculator() {
                   type="number"
                   value={years}
                   onChange={e => setYears(e.target.value)}
-                  className="w-full px-6 py-5 border-2 border-border rounded-2xl text-2xl font-black text-primary focus:outline-none focus:border-green transition-all"
+                  className="w-full px-6 py-5 border-2 border-border rounded-2xl text-2xl font-black text-primary focus:outline-none focus:border-gold transition-all"
                 />
               </div>
             </div>
@@ -98,9 +98,9 @@ export default function InvestmentCalculator() {
         <div className="space-y-6">
           <div className="bg-primary rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 p-8 opacity-10">
-              <TrendingUp className="w-48 h-48 text-green" />
+              <TrendingUp className="w-48 h-48 text-gold" />
             </div>
-            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-green mb-10">Projected Maturity Amount</h3>
+            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gold mb-10">Projected Maturity Amount</h3>
             <div className="relative z-10">
               <div className="text-5xl md:text-6xl font-black mb-10 text-white">
                 {p > 0 ? fmt(result) : 'Rs. —'}
@@ -113,20 +113,20 @@ export default function InvestmentCalculator() {
                 </div>
                 <div>
                   <p className="text-xs font-black text-gray-400 uppercase tracking-widest mb-1">Estimated Gain</p>
-                  <p className="text-xl font-black text-green">{fmt(gain)}</p>
+                  <p className="text-xl font-black text-gold">{fmt(gain)}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-green/10 border border-green/20 rounded-[2.5rem] p-10">
+          <div className="bg-gold/10 border border-gold/20 rounded-[2.5rem] p-10">
             <h4 className="text-xl font-black text-primary mb-4">Strategic Wealth Tip</h4>
             <p className="text-sm text-gray-600 font-medium leading-relaxed mb-8">
-              Compounding interest is the eighth wonder of the world. At a <span className="text-green font-bold">{rate}%</span> return, your capital doubles approximately every <span className="text-green font-bold">{Math.round(72 / r)} years</span>.
+              Compounding interest is the eighth wonder of the world. At a <span className="text-gold font-bold">{rate}%</span> return, your capital doubles approximately every <span className="text-gold font-bold">{Math.round(72 / r)} years</span>.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 text-green font-black uppercase text-xs tracking-widest hover:text-primary transition-colors"
+              className="inline-flex items-center gap-3 text-gold font-black uppercase text-xs tracking-widest hover:text-primary transition-colors"
             >
               Consult a Wealth Strategist <ArrowRight className="w-4 h-4" />
             </Link>

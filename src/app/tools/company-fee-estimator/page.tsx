@@ -57,7 +57,7 @@ export default function CompanyFeeEstimatorPage() {
     <>
       <section className="bg-primary text-white py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-green rounded-full filter blur-[120px]" />
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gold rounded-full filter blur-[120px]" />
         </div>
         <Container>
           <div className="relative z-10 max-w-3xl">
@@ -65,7 +65,7 @@ export default function CompanyFeeEstimatorPage() {
               ← All Tools
             </Link>
             <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
-               Registration Fee <span className="text-green">Estimator</span>
+               Registration Fee <span className="text-gold">Estimator</span>
             </h1>
             <p className="text-xl text-gray-400 font-medium">
               Calculate SECP and FBR registration costs for your new business venture in Pakistan.
@@ -108,26 +108,26 @@ export default function CompanyFeeEstimatorPage() {
                 <div className="animate-in fade-in slide-in-from-top-2 duration-300">
                   <label className="text-xs font-black uppercase tracking-widest text-gray-400 mb-4 block">Authorised Capital (PKR)</label>
                   <div className="relative mb-8">
-                    <span className="absolute left-6 top-1/2 -translate-y-1/2 text-green font-black text-xl">Rs.</span>
+                    <span className="absolute left-6 top-1/2 -translate-y-1/2 text-gold font-black text-xl">Rs.</span>
                     <input
                       type="number"
                       value={capital}
                       onChange={e => setCapital(e.target.value)}
-                      className="w-full pl-16 pr-6 py-5 border-2 border-border rounded-2xl text-2xl font-black text-primary focus:outline-none focus:border-green focus:ring-4 focus:ring-green/10 transition-all"
+                      className="w-full pl-16 pr-6 py-5 border-2 border-border rounded-2xl text-2xl font-black text-primary focus:outline-none focus:border-gold focus:ring-4 focus:ring-gold/10 transition-all"
                     />
                   </div>
                 </div>
               )}
 
-              <div className="p-6 rounded-2xl bg-green/5 border border-green/20">
+              <div className="p-6 rounded-2xl bg-gold/5 border border-gold/20">
                 <div className="flex items-center gap-3 mb-3">
-                  <ShieldCheck className="w-5 h-5 text-green" />
+                  <ShieldCheck className="w-5 h-5 text-gold" />
                   <h4 className="font-black text-primary uppercase text-xs tracking-widest">Compliance Assurance</h4>
                 </div>
                 <div className="space-y-2">
                   {activeEntity.features.map((f, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
                       <span className="text-xs font-bold text-gray-600 uppercase tracking-tight">{f}</span>
                     </div>
                   ))}
@@ -139,20 +139,20 @@ export default function CompanyFeeEstimatorPage() {
             <div className="space-y-6">
                <div className="bg-primary rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl">
                  <div className="absolute top-0 right-0 p-8 opacity-10">
-                   <Calculator className="w-40 h-40 text-green" />
+                   <Calculator className="w-40 h-40 text-gold" />
                  </div>
-                 <h3 className="text-xs font-black uppercase tracking-[0.3em] text-green mb-10">Estimated Total Cost</h3>
+                 <h3 className="text-xs font-black uppercase tracking-[0.3em] text-gold mb-10">Estimated Total Cost</h3>
                  <div className="relative z-10">
                     <div className="text-5xl md:text-6xl font-black mb-8 text-white">{fmt(total)}</div>
                     
                     <div className="space-y-4 pt-8 border-t border-white/10">
                       <div className="flex justify-between items-center text-sm">
                         <span className="text-gray-400 font-bold group">Official Authority Fee</span>
-                        <span className="font-black text-green">{fmt(estimtedFee + stampDuty)}</span>
+                        <span className="font-black text-gold">{fmt(estimtedFee + stampDuty)}</span>
                       </div>
                       <div className="flex justify-between items-center text-sm">
                         <span className="text-gray-400 font-bold">Advisory & Filing Fee</span>
-                        <span className="font-black text-green">{fmt(serviceFee)}</span>
+                        <span className="font-black text-gold">{fmt(serviceFee)}</span>
                       </div>
                       <div className="flex justify-between items-center text-xs text-gray-500 pt-4 font-medium italic">
                         * Prices are indicative & subject to FBR/SECP portal updates.
@@ -170,7 +170,7 @@ export default function CompanyFeeEstimatorPage() {
                       { step: '03', title: 'Digital Signature', desc: 'Biometric verification for all proposed directors.' },
                     ].map((item, i) => (
                       <div key={i} className="flex gap-5 items-start">
-                        <div className="w-10 h-10 rounded-full bg-green/10 flex items-center justify-center font-black text-green text-xs shrink-0">{item.step}</div>
+                        <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center font-black text-gold text-xs shrink-0">{item.step}</div>
                         <div>
                           <p className="font-black text-primary text-sm uppercase tracking-wide">{item.title}</p>
                           <p className="text-xs text-gray-500 font-medium mt-1">{item.desc}</p>
@@ -181,7 +181,7 @@ export default function CompanyFeeEstimatorPage() {
 
                   <Link
                     href="/contact"
-                    className="mt-10 w-full inline-flex items-center justify-center gap-3 bg-green text-white py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300 group"
+                    className="mt-10 w-full inline-flex items-center justify-center gap-3 bg-gold text-white py-5 rounded-2xl font-black text-sm uppercase tracking-[0.2em] hover:bg-primary transition-all duration-300 group"
                   >
                     Start Registration <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>

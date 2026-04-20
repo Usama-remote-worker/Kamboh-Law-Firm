@@ -80,13 +80,13 @@ export default function ToolsPage() {
       <section className="relative bg-primary text-white py-24 md:py-36 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.15]">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold rounded-full filter blur-[150px]" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-green rounded-full filter blur-[120px]" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold rounded-full filter blur-[120px]" />
         </div>
         <Container>
           <div className="relative z-10 text-center max-w-3xl mx-auto">
             <span className="text-gold font-black uppercase tracking-[0.4em] text-sm mb-6 block">Free Tools</span>
             <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-              Tax <span className="text-green">Intelligence</span> Hub
+              Tax <span className="text-gold">Intelligence</span> Hub
             </h1>
             <p className="text-xl text-gray-400 font-medium">
               Professional-grade tax calculation tools — all free, all accurate, updated with FBR 2025-26 regulations.

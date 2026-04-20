@@ -104,7 +104,7 @@ export default function NTNCheckerPage() {
                       </a>
                       <div className="flex items-center justify-between p-6 rounded-2xl bg-muted border border-border">
                         <span className="font-bold text-gray-500 text-sm">Status: Redirect Ready</span>
-                        <div className="w-3 h-3 bg-green rounded-full animate-pulse"></div>
+                        <div className="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
                       </div>
                     </div>
 

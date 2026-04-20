@@ -133,11 +133,11 @@ export default function WithholdingCalculatorPage() {
                 >
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4">{item.label}</p>
                   <div className="flex items-center justify-between">
-                    <p className={`text-4xl md:text-5xl font-black ${item.highlight ? 'text-green' : 'text-primary'}`}>
+                    <p className={`text-4xl md:text-5xl font-black ${item.highlight ? 'text-gold' : 'text-primary'}`}>
                       {base > 0 ? fmt(item.val) : 'Rs. —'}
                     </p>
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${item.highlight ? 'bg-green/10' : 'bg-muted'}`}>
-                      <item.icon className={`w-7 h-7 ${item.highlight ? 'text-green' : 'text-gold-dark'}`} />
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${item.highlight ? 'bg-gold/10' : 'bg-muted'}`}>
+                      <item.icon className={`w-7 h-7 ${item.highlight ? 'text-gold' : 'text-gold-dark'}`} />
                     </div>
                   </div>
                 </div>

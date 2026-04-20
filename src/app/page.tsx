@@ -33,8 +33,8 @@ export default function Home() {
         <Container>
           <div className="relative z-10 max-w-4xl">
             <div className="animate-fadeInUp">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-green/10 border border-green/20 rounded-full">
-                <span className="text-green font-black text-xs uppercase tracking-widest">✨ Pakistan&apos;s #1 Regulatory Platform</span>
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-gold/10 border border-gold/20 rounded-full">
+                <span className="text-gold font-black text-xs uppercase tracking-widest">✨ Pakistan&apos;s #1 Regulatory Platform</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-primary tracking-tight">
                 Tax & Business <br /> <span className="gradient-text">Excellence</span> Redefined
