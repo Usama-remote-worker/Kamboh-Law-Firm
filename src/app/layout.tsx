@@ -15,9 +15,13 @@ export const metadata: Metadata = {
   keywords: ["tax filing Lahore", "NTN registration", "SECP incorporation", "FBR filers", "GST calculator"],
   robots: { index: true, follow: true },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/logo.png',
+    icon: [
+      { url: '/icon.png' },
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
   },
 };
 
