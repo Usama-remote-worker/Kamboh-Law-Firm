@@ -2,19 +2,20 @@ export const SITE_NAME = 'Kamboh Associates';
 export const SITE_DESCRIPTION = 'Expert tax filing, NTN registration, business setup and financial services in Lahore, Pakistan';
 export const SITE_URL = 'https://kambohassociates.com';
 
-// ── Shop Address from Google Business Profile ──
+// ── Shop Address Updated per Audit Instructions ──
 export const SHOP_ADDRESS = {
   name: 'Kamboh Associates',
-  street: 'Iqbal, Near Shell Pump Opp.',
+  street: 'Allama Iqbal Town, Opp. Shell Pump, Main Boulevard',
   city: 'Lahore',
   country: 'Pakistan',
   phone1: '0328-4675162',
   phone2: '0304-4296295',
+  whatsapp: '03284675162',
   hours: 'Mon–Sat: 10:00 AM – 10:00 PM',
   rating: '4.7',
   reviewCount: '3',
   type: 'Law Firm / Tax Consultancy',
-  mapUrl: 'https://www.google.com/maps/search/Kamboh+Associates+Lahore',
+  mapUrl: 'https://vymaps.com/PK/Kamboh-Associates-6347517/',
 };
 
 export const TOOLS = [
@@ -73,7 +74,7 @@ export const SERVICES = [
   {
     id: 'income-tax-filing',
     category: 'Individual',
-    name: 'Income Tax Return Filing',
+    name: 'FBR Tax Filing',
     description: 'File your individual income tax return with full FBR compliance. We handle salaried, freelance, rental, and business income.',
     icon: 'ClipboardList',
     features: ['Salaried & freelance income', 'Rental & property income', 'Tax deduction optimization', 'FBR e-filing submission', 'Withholding tax reconciliation'],
@@ -90,7 +91,7 @@ export const SERVICES = [
   },
   // ── Business Registration ──
   {
-    id: 'sole-proprietorship',
+    id: 'sele-proprietorship',
     category: 'Business Registration',
     name: 'Sole Proprietorship',
     description: 'Simple & affordable registration for individual business owners. Ideal for freelancers, shopkeepers, and small traders.',
@@ -101,7 +102,7 @@ export const SERVICES = [
   {
     id: 'private-limited',
     category: 'Business Registration',
-    name: 'Private Limited Company',
+    name: 'SECP Company Registration',
     description: 'Full SECP-registered Private Limited company formation. Perfect for scalable, investor-ready ventures.',
     icon: 'Building2',
     features: ['SECP incorporation', 'Memorandum & Articles', 'NTN & GST registration', 'Share certificate issuance', 'Director/officer registration'],
@@ -116,33 +117,14 @@ export const SERVICES = [
     features: ['Partnership deed drafting', 'NTN registration', 'FBR compliance setup', 'Bank account support', 'Annual filing support'],
     popular: false,
   },
-  // ── Sales Tax ──
-  {
-    id: 'gst-registration',
-    category: 'Sales Tax',
-    name: 'GST / Sales Tax Registration',
-    description: 'Register for General Sales Tax with FBR. Mandatory for businesses exceeding defined turnover thresholds.',
-    icon: 'Coins',
-    features: ['FBR GST enrollment', 'Provincial PST registration', 'Monthly return filing', 'Input tax optimization', 'Compliance advisory'],
-    popular: false,
-  },
-  {
-    id: 'monthly-sales-tax',
-    category: 'Sales Tax',
-    name: 'Monthly Sales Tax Filing',
-    description: 'Accurate monthly GST return preparation and e-filing with FBR. Avoid penalties with our timely compliance service.',
-    icon: 'BarChart',
-    features: ['Monthly return preparation', 'Invoice verification', 'Annexure-A & B filing', 'Penalty avoidance tracking', 'FBR correspondence'],
-    popular: false,
-  },
   // ── Accounting ──
   {
     id: 'bookkeeping',
     category: 'Accounting',
-    name: 'Bookkeeping & Accounting',
+    name: 'Audit & Accounts',
     description: 'Professional monthly bookkeeping, financial statements, and management accounts for your business.',
     icon: 'BarChart',
-    features: ['Monthly bookkeeping', 'Profit & Loss statements', 'Balance sheet preparation', 'Payroll management', 'Financial analysis'],
+    features: ['Monthly bookkeeping', 'Profit & Loss statements', 'Audit notice representation', 'FBR Liaison', 'Document compliance'],
     popular: false,
   },
   {
@@ -151,12 +133,12 @@ export const SERVICES = [
     name: 'FBR Audit Representation',
     description: 'Expert representation and documentation support during FBR tax audits. Protect your rights with professional counsel.',
     icon: 'ShieldCheck',
-    features: ['Audit notice response', 'Document compilation', 'FBR liaison', 'Legal representation', '360° defence strategy'],
+    features: ['Audit notice response', 'Document compilation', 'FBR liaison', 'Legal representation', '360° Defense strategy'],
     popular: false,
   },
 ];
 
-export const SERVICE_CATEGORIES = ['Individual', 'Business Registration', 'Sales Tax', 'Accounting'];
+export const SERVICE_CATEGORIES = ['Individual', 'Business Registration', 'Accounting'];
 
 export const KEYWORDS = [
   'tax filing Lahore',

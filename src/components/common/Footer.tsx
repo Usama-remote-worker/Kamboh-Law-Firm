@@ -25,33 +25,42 @@ export default function Footer() {
           {/* Brand & Address */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gold/10 border border-gold/20 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center">
                 <span className="text-gold text-xl font-black">KA</span>
               </div>
-              <h3 className="text-2xl font-black tracking-tight">{SITE_NAME}</h3>
+              <h3 className="text-2xl font-bold tracking-tight">{SITE_NAME}</h3>
             </div>
             <p className="text-base text-gray-400 font-medium leading-relaxed">
-              Pakistan&apos;s trusted tax & legal advisory. Authorised FBR firm serving Lahore since 2008.
+              Pakistan&apos;s trusted tax & legal advisory. Authorized FBR firm serving Lahore since 2008.
             </p>
-            {/* Real Address */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold shrink-0 mt-1" />
-                <p className="text-sm font-semibold text-gray-400">{SHOP_ADDRESS.street}, {SHOP_ADDRESS.city}, {SHOP_ADDRESS.country}</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-gold shrink-0" />
-                <div>
-                  <a href={`tel:${SHOP_ADDRESS.phone1}`} className="block text-sm font-bold text-gray-300 hover:text-gold transition-colors">{SHOP_ADDRESS.phone1}</a>
-                  <a href={`tel:${SHOP_ADDRESS.phone2}`} className="block text-sm font-bold text-gray-300 hover:text-gold transition-colors">{SHOP_ADDRESS.phone2}</a>
+            {/* Real Address Update */}
+            <div className="space-y-4 pt-2">
+              <div className="flex items-start gap-3 group">
+                <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold transition-colors">
+                  <MapPin className="w-4 h-4 text-gold group-hover:text-primary" />
                 </div>
+                <p className="text-sm font-semibold text-gray-300 leading-relaxed">
+                   {SHOP_ADDRESS.street}, {SHOP_ADDRESS.city}, {SHOP_ADDRESS.country}.
+                </p>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-gold shrink-0" />
-                <a href="mailto:info@kambohassociates.com" className="text-sm font-bold text-gray-300 hover:text-gold transition-colors">info@kambohassociates.com</a>
+              <div className="flex items-center gap-3 group">
+                <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold transition-colors">
+                  <Phone className="w-4 h-4 text-gold group-hover:text-primary" />
+                </div>
+                <a href={`tel:${SHOP_ADDRESS.phone1}`} className="text-sm font-bold text-gray-300 hover:text-gold transition-colors">
+                  {SHOP_ADDRESS.phone1}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 group">
+                <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold transition-colors">
+                  <Mail className="w-4 h-4 text-gold group-hover:text-primary" />
+                </div>
+                <a href="mailto:info@kambohassociates.com" className="text-sm font-bold text-gray-300 hover:text-gold transition-colors">
+                  info@kambohassociates.com
+                </a>
               </div>
             </div>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-4">
               {[X, MessageCircle, Share2].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold hover:text-primary transition-all duration-300">
                   <Icon className="w-5 h-5" />
@@ -71,7 +80,7 @@ export default function Footer() {
                 { name: 'Strategic Vision', path: '/about' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all font-bold group">
+                  <Link href={link.path} className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all font-bold">
                     {link.name}
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -91,7 +100,7 @@ export default function Footer() {
                 { name: 'Direct Support', path: '/contact' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all font-bold group">
+                  <Link href={link.path} className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all font-bold">
                     {link.name}
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -108,10 +117,9 @@ export default function Footer() {
                 { name: 'Privacy Protocols', path: '/privacy' },
                 { name: 'Service Mandate', path: '/terms' },
                 { name: 'Regulatory Disclaimer', path: '/disclaimer' },
-                { name: 'Entity Sitemap', path: '/sitemap' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all font-bold group">
+                  <Link href={link.path} className="group flex items-center gap-2 text-gray-400 hover:text-white transition-all font-bold">
                     {link.name}
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -122,20 +130,20 @@ export default function Footer() {
         </div>
 
         {/* Global Bottom Bar */}
-        <div className="pt-12 border-t border-white/5">
+        <div className="pt-12 border-t border-white/5 text-center lg:text-left">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
             <div className="flex flex-wrap justify-center gap-10">
                <div className="flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-gold" />
-                  <span className="text-xs font-black uppercase tracking-widest text-gray-500">AES-256 Sovereignty</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">AES-256 Sovereignty</span>
                </div>
                <div className="flex items-center gap-3">
                   <Award className="w-5 h-5 text-gold" />
-                  <span className="text-xs font-black uppercase tracking-widest text-gray-500">ISO-9001 Certified</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">ISO-9001 Certified</span>
                </div>
                <div className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-gold" />
-                  <span className="text-xs font-black uppercase tracking-widest text-gray-500">FBR Authorized</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">FBR Authorized</span>
                </div>
             </div>
             
@@ -148,4 +156,3 @@ export default function Footer() {
     </footer>
   );
 }
-

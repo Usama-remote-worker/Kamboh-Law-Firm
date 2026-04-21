@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Container from '@/components/common/Container';
 import Button from '@/components/common/Button';
@@ -11,329 +13,217 @@ import {
   ArrowRight,
   TrendingDown,
   Briefcase,
-  Search,
-  MessageSquare,
-  FileText,
-  Coins,
   TrendingUp,
-  Star
+  Award,
+  Globe,
+  FileText,
+  BadgeCheck
 } from 'lucide-react';
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white pt-32 pb-20 md:pt-48 md:pb-36 border-b border-border">
-        {/* Subtle Background pattern or gradient */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-gold rounded-full filter blur-[120px]"></div>
-          <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gold-dark rounded-full filter blur-[120px]"></div>
-        </div>
-
+      {/* Hero Section - Refactored for Brand Compliance */}
+      <section className="relative overflow-hidden bg-[#F5F7FA] pt-32 pb-20 md:pt-48 md:pb-36 border-b border-border">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-top-right"></div>
+        
         <Container>
-          <div className="relative z-10 max-w-4xl">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fadeInUp">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-gold/10 border border-gold/20 rounded-full">
-                <span className="text-gold font-black text-xs uppercase tracking-widest">✨ Pakistan&apos;s #1 Regulatory Platform</span>
+              <div className="inline-flex items-center gap-2 mb-8 px-5 py-2 bg-white border border-gold/30 rounded-full shadow-sm">
+                <BadgeCheck className="w-4 h-4 text-gold" />
+                <span className="text-primary font-bold text-xs uppercase tracking-widest">Pakistan's #1 Regulatory Platform</span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] text-primary tracking-tight">
-                Tax & Business <br /> <span className="gradient-text">Excellence</span> Redefined
+              <h1 className="text-[40px] md:text-[56px] font-bold mb-8 leading-[1.1] text-primary">
+                Tax & Business <br /> <span className="text-gold">Excellence</span> Redefined
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-10 font-medium leading-relaxed max-w-2xl">
-                Premium tax filing, seamless business registration, and strategic financial advisory tailored for Pakistan&apos;s elite professionals and enterprises.
+              <p className="text-lg md:text-xl text-charcoal mb-12 font-medium leading-relaxed max-w-xl">
+                Premium tax filing, seamless business registration, and strategic financial advisory tailored for <span className="font-bold text-primary italic underline decoration-gold/50">Pakistan's Elite Professionals</span> and enterprises.
               </p>
               <div className="flex flex-col sm:flex-row gap-5">
                 <Link href="/services">
-                  <Button size="lg" className="bg-primary text-white hover:bg-gold transition-all duration-500 shadow-xl shadow-gold/10 px-8">
+                  <Button size="lg" className="bg-gold text-white hover:bg-primary transition-all duration-500 shadow-2xl shadow-gold/20 px-10 rounded-xl">
                     Our Premium Services
                   </Button>
                 </Link>
                 <Link href="/tools">
-                  <Button size="lg" variant="outline" className="border-border hover:border-gold hover:text-gold transition-all duration-300">
+                  <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:border-gold hover:text-gold transition-all duration-300 rounded-xl bg-white/50 backdrop-blur-sm">
                     Explore Advisory Tools
                   </Button>
                 </Link>
               </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Trust & Stats Section */}
-      <section className="bg-primary text-white py-14 overflow-hidden">
-        <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 items-center">
-            {[
-              { label: 'Verified Users', value: '50K+', icon: Users, color: 'text-gold' },
-              { label: 'Tax Optimized', value: '₨100Cr+', icon: TrendingDown, color: 'text-gold' },
-              { label: 'Advisory Hours', value: '24/7', icon: Clock, color: 'text-gold' },
-              { label: 'Data Security', value: 'AES-256', icon: ShieldCheck, color: 'text-gold' },
-            ].map((stat, i) => (
-              <div key={i} className="flex items-center gap-4 group cursor-default">
-                <div className="p-3 bg-white/5 rounded-xl group-hover:bg-gold/20 transition-colors border border-white/10 group-hover:border-gold/30">
-                  <stat.icon className={`w-6 h-6 ${stat.color} group-hover:scale-110 transition-transform`} />
-                </div>
-                <div>
-                  <div className="text-2xl md:text-3xl font-bold group-hover:text-gold transition-colors">{stat.value}</div>
-                  <div className="text-xs font-semibold text-gray-400 group-hover:text-gray-200 uppercase tracking-widest">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Why Choose Kamboh Section */}
-      <section className="py-24 md:py-32 bg-muted/30">
-        <Container>
-          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">The Kamboh Advantage</h2>
-              <p className="text-lg text-gray-600 font-medium leading-relaxed">
-                We combine deep industrial expertise with modern technology to deliver performance-driven financial and regulatory solutions.
-              </p>
-            </div>
-            <Link href="/about" className="text-gold font-bold flex items-center gap-2 hover:gap-3 transition-all border-b-2 border-gold pb-1 mb-2">
-              Learn Our Philosophy <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: 'Lightning Fast Execution', desc: 'Precision-engineered workflows that deliver results in hours.', icon: Clock },
-              { title: 'Expert Advisory', desc: 'Certified tax strategists and business legal experts at your disposal.', icon: Briefcase },
-              { title: 'Transparent Pricing', desc: 'No hidden levies. Just pure value-driven professional engagement.', icon: Coins },
-              { title: 'Ironclad Security', desc: 'Bank-grade encryption protecting your most sensitive credentials.', icon: ShieldCheck },
-              { title: 'Elite Support', desc: 'Dedicated account managers for white-glove customer assistance.', icon: MessageSquare },
-              { title: 'FBR/SECP Excellence', desc: 'Flawless compliance with all Pakistani regulatory authorities.', icon: CheckCircle2 },
-            ].map((feature, i) => (
-              <div
-                key={i}
-                className="group p-8 rounded-3xl bg-white border border-border hover:border-gold/30 hover:shadow-2xl hover:shadow-gold/5 transition-all duration-500"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-muted group-hover:bg-gold-light/30 flex items-center justify-center mb-6 transition-colors duration-500">
-                  <feature.icon className="w-7 h-7 text-primary group-hover:text-gold-dark transition-colors" />
-                </div>
-                <h3 className="text-2xl font-bold text-primary mb-3 group-hover:text-gold-dark transition-colors">{feature.title}</h3>
-                <p className="text-gray-600 font-medium leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Advisory Tools Section */}
-      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
-        <Container>
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Precision Advisory Tools</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
-              Data-backed calculators and management tools designed for high-stakes financial planning.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TOOLS.map((tool, i) => {
-              const IconComponent = (Icons as any)[tool.icon] || Icons.HelpCircle;
-              return (
-                <Link key={tool.id} href={tool.path}>
-                  <div className="h-full p-8 rounded-3xl bg-muted/20 border border-border hover:border-gold/30 group hover:bg-white hover:shadow-2xl hover:shadow-gold/5 transition-all duration-500 cursor-pointer flex flex-col">
-                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500 border border-border/50">
-                      <IconComponent className="w-8 h-8 text-gold-dark" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-primary mb-3">{tool.title}</h3>
-                    <p className="text-gray-600 font-medium mb-8 flex-grow">{tool.description}</p>
-                    <div className="text-gold-dark font-bold text-base flex items-center gap-2 group-hover:gap-3 transition-all">
-                      Access Tool <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </Container>
-      </section>
-
-      {/* Core Services Overhaul */}
-      <section className="py-24 md:py-32 bg-primary text-white relative">
-        <Container>
-          <div className="text-center mb-20">
-            <span className="text-gold font-black uppercase tracking-[0.3em] text-sm mb-4 block">Engineered for Success</span>
-            <h2 className="text-4xl md:text-6xl font-black mb-4">Professional Ecosystem</h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto font-medium">
-              Tailored regulatory solutions for startups, freelancers, and corporations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {SERVICES.map((service) => {
-               const IconComponent = (Icons as any)[service.icon] || Icons.HelpCircle;
-               return (
-                <div
-                  key={service.id}
-                  className={`rounded-[2.5rem] p-10 transition-all duration-500 border-2 flex flex-col ${
-                    service.popular
-                    ? 'bg-gradient-to-br from-[#222] to-primary border-gold shadow-[0_20px_50px_rgba(212,175,55,0.15)] scale-105 z-10'
-                    : 'bg-white/5 border-white/10 hover:border-gold/30'
-                  }`}
-                >
-                  {service.popular && (
-                    <div className="self-start mb-8 px-4 py-1.5 bg-gold text-primary rounded-full text-xs font-black tracking-widest uppercase">
-                      Premium Choice
-                    </div>
-                  )}
-                  <IconComponent className={`w-12 h-12 mb-6 ${service.popular ? 'text-gold' : 'text-gold/80'}`} />
-                  <h3 className="text-3xl font-bold mb-4">{service.name}</h3>
-                  <p className="text-lg font-medium mb-10 text-gray-400">
-                    {service.description}
-                  </p>
-                  <div className="space-y-4 mb-12 flex-grow">
-                    {service.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-gold shrink-0" />
-                        <span className="text-sm font-semibold text-gray-300 tracking-wide uppercase">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button
-                    className={`w-full py-6 rounded-2xl font-bold text-lg transition-all duration-300 ${
-                      service.popular 
-                      ? 'bg-gold text-primary hover:bg-white' 
-                      : 'bg-white text-primary hover:bg-gold'
-                    }`}
-                  >
-                    Engagement Inquiry
-                  </Button>
-                </div>
-               );
-            })}
-          </div>
-        </Container>
-      </section>
-
-      {/* Speed & Trust Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-gold-light/30 border border-gold/30 rounded-full">
-                <Clock className="w-4 h-4 text-gold-dark" />
-                <span className="text-gold-dark font-bold text-xs uppercase tracking-widest">Ultra-Fast Turnaround</span>
-              </div>
-              <h2 className="text-4xl md:text-6xl font-black text-primary mb-8 leading-tight">
-                Efficiency that <span className="text-gold">Moves Mountains</span>
-              </h2>
-              <p className="text-xl text-gray-600 mb-12 font-medium leading-relaxed">
-                In the world of finance, speed is currency. Our accelerated submission engine ensures your filings are processed with unprecedented velocity.
-              </p>
               
-              <div className="space-y-8">
-                {[
-                  { time: '2 Hours', label: 'Consultation Response', desc: 'Expert strategic advice delivered directly to your inbox.' },
-                  { time: '24 Hours', label: 'Tax Return Ready', desc: 'Complete FBR filing preparation and validation guarantee.' },
-                  { time: '48 Hours', label: 'Entity Registration', desc: 'SECP and NTN processing for immediate business operation.' },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-6 items-start group">
-                    <div className="text-3xl font-black text-gold-dark/20 group-hover:text-gold transition-colors">{item.time}</div>
-                    <div>
-                      <h4 className="text-xl font-extrabold text-primary mb-1">{item.label}</h4>
-                      <p className="text-gray-500 font-medium">{item.desc}</p>
+              <div className="mt-16 flex items-center gap-8 pt-8 border-t border-primary/10">
+                <div className="flex -space-x-4">
+                  {[1,2,3,4].map(i => (
+                    <div key={i} className="w-12 h-12 rounded-full border-4 border-white bg-muted flex items-center justify-center font-bold text-xs text-primary">
+                      {String.fromCharCode(64 + i)}
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                <div className="text-sm font-bold text-charcoal">
+                  Trusted by <span className="text-gold">5,000+</span> Corporate Entities
+                </div>
               </div>
             </div>
-
-            <div className="relative">
-               <div className="absolute -inset-4 bg-gold rounded-[3rem] rotate-3 opacity-10"></div>
-               <div className="relative bg-muted rounded-[3rem] p-12 border border-border overflow-hidden">
-                  <div className="absolute top-0 right-0 p-8 opacity-10">
-                    <ShieldCheck className="w-48 h-48 text-gold" />
+            
+            <div className="hidden lg:block relative">
+               <div className="absolute -inset-10 bg-gold/10 rounded-full filter blur-[80px]"></div>
+               <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(0,57,36,0.15)] border-8 border-white">
+                  <img 
+                    src="/flyer_mockup.jpg" 
+                    alt="Kamboh Associates Tax Consultant Lahore" 
+                    className="w-full h-auto object-cover" 
+                    onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1554224155-169641357599?auto=format&fit=crop&q=80&w=1000'}
+                  />
+                  <div className="absolute bottom-10 left-10 right-10 bg-white/90 backdrop-blur-md p-8 rounded-3xl border border-gold/20 flex items-center justify-between">
+                    <div>
+                      <div className="text-primary font-black text-2xl">99.9%</div>
+                      <div className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Acceptance Rate</div>
+                    </div>
+                    <div className="h-10 w-px bg-gray-200"></div>
+                    <div>
+                      <div className="text-primary font-black text-2xl">24h</div>
+                      <div className="text-[10px] uppercase font-bold text-gray-500 tracking-widest">Turnaround</div>
+                    </div>
                   </div>
-                  <h3 className="text-3xl font-black text-primary mb-6">Guaranteed Compliance</h3>
-                  <div className="space-y-6">
-                    {[
-                      '99.9% FBR Acceptance Rate',
-                      'Legal Indemnity on Filings',
-                      'Real-time Status Tracking',
-                      'Automated Deadline Alerts'
-                    ].map((check, i) => (
-                      <div key={i} className="flex items-center gap-4">
-                        <div className="w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center">
-                          <CheckCircle2 className="w-4 h-4 text-gold-dark" />
-                        </div>
-                        <span className="text-lg font-bold text-gray-700">{check}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Link href="/contact" className="mt-12 inline-block">
-                    <Button size="lg" className="bg-primary text-white rounded-2xl px-10">Get Started Now</Button>
-                  </Link>
                </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 md:py-32 bg-muted/30">
+      {/* Services Section - Precise Cards */}
+      <section className="py-24 md:py-36 bg-white">
         <Container>
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-4">Client Testimonials</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
-              Trusted by Pakistan&apos;s leading entrepreneurs and digital innovators.
+          <div className="text-center mb-24">
+            <h2 className="text-3xl md:text-[32px] font-bold text-primary mb-6">Expert Advisory Solutions</h2>
+            <div className="w-24 h-1.5 bg-gold mx-auto rounded-full"></div>
+            <p className="mt-8 text-lg text-charcoal max-w-2xl mx-auto font-medium">
+              Precision-driven regulatory assistance for forward-thinking business leaders.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { author: 'Ahmed Khan', role: 'Strategic Consultant', quote: 'Kamboh Associates delivered my FBR filings with surgical precision. Unmatched professionalism.' },
-              { author: 'Fatima Ali', role: 'Tech Founder', quote: 'Registering my startup was effortless. They handled the legal complexity while I focused on building.' },
-              { author: 'Hassan Malik', role: 'Business Owner', quote: 'The tax planning alone saved us millions. Their advisory is worth every penny of the engagement.' },
-            ].map((testimonial, i) => (
-              <div key={i} className="p-10 rounded-[2.5rem] bg-white border border-border shadow-sm hover:shadow-xl transition-all duration-500">
-                <div className="flex gap-1 mb-6">
-                  {[1,2,3,4,5].map(s => <Icons.Star key={s} className="w-5 h-5 fill-gold text-gold" />)}
-                </div>
-                <p className="text-xl font-medium text-gray-700 mb-8 italic leading-relaxed">"{testimonial.quote}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gold-light/50 flex items-center justify-center font-bold text-gold-dark">
-                    {testimonial.author[0]}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {SERVICES.slice(0, 6).map((service) => {
+              const IconComponent = (Icons as any)[service.icon] || Icons.HelpCircle;
+              return (
+                <div
+                  key={service.id}
+                  className="group relative bg-white rounded-[2.5rem] p-10 border border-gold/10 hover:border-gold/40 shadow-sm hover:shadow-[0_30px_60px_rgba(177,144,68,0.1)] transition-all duration-500 flex flex-col"
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-muted group-hover:bg-primary transition-all duration-500 flex items-center justify-center mb-8">
+                    <IconComponent className="w-8 h-8 text-gold group-hover:text-white transition-colors" />
                   </div>
-                  <div>
-                    <div className="font-bold text-primary">{testimonial.author}</div>
-                    <div className="text-sm text-gray-500 font-semibold">{testimonial.role}</div>
+                  <h3 className="text-2xl font-bold text-primary mb-6">{service.name}</h3>
+                  <div className="space-y-4 mb-10 flex-grow">
+                    {service.features.slice(0, 4).map((feature, j) => (
+                      <div key={j} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                        <span className="text-sm font-semibold text-charcoal">{feature}</span>
+                      </div>
+                    ))}
                   </div>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-primary font-black text-sm uppercase tracking-widest group-hover:text-gold transition-colors">
+                    Consult Details <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 md:py-32">
+      {/* Trust Signals & Accreditations */}
+      <section className="py-24 bg-primary text-white overflow-hidden relative">
+        <div className="absolute inset-0 opacity-10">
+           <div className="grid grid-cols-8 gap-10">
+             {Array.from({length: 40}).map((_, i) => (
+               <ShieldCheck key={i} className="w-12 h-12" />
+             ))}
+           </div>
+        </div>
+        
         <Container>
-          <div className="relative rounded-[3rem] bg-primary overflow-hidden text-center p-16 md:p-32">
-            <div className="absolute top-0 right-0 p-20 opacity-10">
-              <TrendingUp className="w-96 h-96 text-gold" />
-            </div>
-            <div className="relative z-10">
-              <h2 className="text-5xl md:text-7xl font-black text-white mb-8">Secure Your <br /> <span className="text-gold">Financial Future</span></h2>
-              <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-medium">
-                Join 50,000+ satisfied clients who trust Kamboh Associates for regulatory excellence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                 <Link href="/contact">
-                   <Button size="lg" className="bg-gold text-primary hover:bg-white px-12 py-8 rounded-2xl text-xl font-bold">Initiate Engagement</Button>
-                 </Link>
-                 <Link href="/services">
-                   <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-12 py-8 rounded-2xl text-xl font-bold">Our Strategies</Button>
-                 </Link>
+           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
+              <div className="max-w-xl text-center lg:text-left">
+                <h2 className="text-3xl md:text-[32px] font-bold text-white mb-8 border-l-4 border-gold pl-6">Accreditations & Certificates</h2>
+                <p className="text-lg text-gray-300 font-medium leading-relaxed mb-10">
+                  Kamboh Associates is a fully recognized and authorized tax practice firm. We adhere to the stringent compliance standards of the FBR and SECP.
+                </p>
+                <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+                   <div className="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                     <Award className="w-6 h-6 text-gold" />
+                     <span className="font-bold uppercase tracking-widest text-xs">FBR Authorized</span>
+                   </div>
+                   <div className="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                     <Globe className="w-6 h-6 text-gold" />
+                     <span className="font-bold uppercase tracking-widest text-xs">SECP Registered</span>
+                   </div>
+                </div>
               </div>
+              
+              <div className="grid grid-cols-2 gap-8">
+                 <div className="bg-white/95 p-4 rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <img src="/cert_placeholder_1.jpg" alt="FBR Certificate Kamboh Associates Lahore" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
+                    <div className="mt-3 text-center text-[10px] font-black text-primary uppercase">NTN Certification</div>
+                 </div>
+                 <div className="bg-white/95 p-4 rounded-2xl shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500 mt-12">
+                    <img src="/cert_placeholder_2.jpg" alt="SECP Certification Kamboh Associates" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
+                    <div className="mt-3 text-center text-[10px] font-black text-primary uppercase">STRN Registration</div>
+                 </div>
+              </div>
+           </div>
+        </Container>
+      </section>
+
+      {/* Adisory Tools CTA */}
+      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="order-2 lg:order-1">
+               <div className="grid grid-cols-2 gap-6">
+                 {TOOLS.slice(0, 4).map((tool, i) => (
+                    <Link key={tool.id} href={tool.path}>
+                      <div className="p-8 rounded-3xl bg-muted border border-gold/5 hover:border-gold/30 hover:bg-white hover:shadow-xl transition-all duration-300">
+                         <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-4">
+                           <FileText className="w-6 h-6 text-gold" />
+                         </div>
+                         <div className="font-bold text-primary text-sm leading-tight">{tool.title}</div>
+                      </div>
+                    </Link>
+                 ))}
+               </div>
+            </div>
+            
+            <div className="order-1 lg:order-2">
+               <h2 className="text-3xl md:text-[32px] font-bold text-primary mb-8 underline decoration-gold/30 underline-offset-8">Precision Intelligence Hub</h2>
+               <p className="text-lg text-charcoal font-medium leading-relaxed mb-10">
+                 Harness the power of our data-backed advisory engines. Designed for high-stakes decision making and meticulous regulatory compliance.
+               </p>
+               <Link href="/tools">
+                 <Button size="lg" className="bg-primary text-white hover:bg-gold rounded-xl px-10">Access Strategic Hub</Button>
+               </Link>
             </div>
           </div>
         </Container>
+      </section>
+
+      {/* Final Brand CTA */}
+      <section className="py-24 md:py-40 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-fixed">
+        <div className="bg-primary/90 py-24 md:py-40">
+          <Container>
+            <div className="text-center max-w-4xl mx-auto">
+               <span className="text-gold font-black uppercase tracking-[0.4em] text-xs mb-8 block">Your Regulatory Advantage</span>
+               <h2 className="text-4xl md:text-[56px] font-bold text-white mb-10 leading-tight">Master Your <span className="text-gold">Financial</span> Sovereignty</h2>
+               <p className="text-xl text-gray-300 mb-12 font-medium">Join 5,000+ elite business owners who trust Kamboh Associates.</p>
+               <Link href="/contact">
+                 <Button size="lg" className="bg-gold text-white hover:bg-white hover:text-primary px-16 py-8 rounded-2xl text-xl font-bold shadow-2xl">Initiate Strategic Review</Button>
+               </Link>
+            </div>
+          </Container>
+        </div>
       </section>
     </>
   );

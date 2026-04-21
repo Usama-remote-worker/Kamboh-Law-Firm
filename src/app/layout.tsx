@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 import { generateStructuredData } from '@/lib/seo';
 import { SITE_NAME } from "@/lib/constants";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
     default: `${SITE_NAME} - Tax & Regulatory Excellence in Pakistan`,
   },
-  description: "Expert tax filing, business registration, SEPC incorporation and financial strategic advisory. Serving Pakistan's elite since 2008.",
+  description: "Expert tax filing, business registration, SEPC incorporation and financial strategic advisory. Serving Pakistan's Elite Professionals since 2008.",
   keywords: ["tax filing Lahore", "NTN registration", "SECP incorporation", "FBR filers", "GST calculator"],
   robots: { index: true, follow: true },
 };
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -106,7 +106,7 @@ export default function CompanyFeeEstimatorPage() {
 
               {activeEntity.id === 'pvt-ltd' && (
                 <div className="animate-in fade-in slide-in-from-top-2 duration-300">
-                  <label className="text-xs font-black uppercase tracking-widest text-gray-400 mb-4 block">Authorised Capital (PKR)</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-gray-400 mb-4 block">Authorized Capital (PKR)</label>
                   <div className="relative mb-8">
                     <span className="absolute left-6 top-1/2 -translate-y-1/2 text-gold font-black text-xl">Rs.</span>
                     <input
