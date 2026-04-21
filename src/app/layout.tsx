@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description: "Expert tax filing, business registration, SEPC incorporation and financial strategic advisory. Serving Pakistan's Elite Professionals since 2008.",
   keywords: ["tax filing Lahore", "NTN registration", "SECP incorporation", "FBR filers", "GST calculator"],
   robots: { index: true, follow: true },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({
