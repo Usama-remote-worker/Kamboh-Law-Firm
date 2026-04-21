@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #FFFFFF;
   --foreground: #1A1A1A;
-  --primary: #1A1A1A;
-  --secondary: #FDFDFD;
-  --accent-gold: #D4AF37;
-  --accent-gold-dark: #B8860B;
-  --accent-gold-light: #F4E4BC;
-  --muted: #F5F5F7;
-  --border: #E5E7EB;
+  --primary: #0D2C24; /* Deep Forest Green from flyer */
+  --accent-gold: #B8860B; /* Rich Gold from flyer */
+  --accent-gold-dark: #8B6914;
+  --accent-gold-light: #D4AF37;
+  --muted: #F0F4F2;
+  --border: #E2E8E4;
 }
 
 @theme inline {
@@ -21,23 +20,19 @@
   --color-gold-dark: var(--accent-gold-dark);
   --color-gold-light: var(--accent-gold-light);
   --color-muted: var(--muted);
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Inter', sans-serif; /* Enforcing Sans-Serif everywhere */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFFF; /* Keeping light background for premium professional feel as per user preference */
+    --foreground: #1A1A1A;
   }
 }
 
 * {
-  font-family: 'Inter', sans-serif;
-}
-
-h1, h2, h3, h4, .font-serif {
-  font-family: 'Playfair Display', serif !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
 }
 
 html {
@@ -72,16 +67,16 @@ body {
 .glass {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(13, 44, 36, 0.1);
 }
 
 /* Gradient backgrounds */
 .gradient-primary {
-  background: linear-gradient(135deg, #1A1A1A 0%, #333333 100%);
+  background: linear-gradient(135deg, #0D2C24 0%, #1A1A1A 100%);
 }
 
 .gradient-gold {
-  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #B8860B 0%, #8B6914 100%);
 }
 
 .gradient-light {
@@ -90,7 +85,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -103,7 +98,7 @@ body {
 
 .hover-lift:hover {
   transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 30px 60px rgba(13, 44, 36, 0.12);
 }
 
 /* Card hover effect */
@@ -114,7 +109,7 @@ body {
 
 .card-hover:hover {
   border-color: var(--accent-gold);
-  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 20px 40px rgba(184, 134, 11, 0.1);
   transform: translateY(-6px);
 }
 
@@ -148,4 +143,3 @@ body {
 .text-gold-dark {
   color: var(--accent-gold-dark);
 }
-

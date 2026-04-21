@@ -9,22 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#000000',
+        primary: '#0D2C24', // Flyer Forest Green
         secondary: '#FFFFFF',
-        accent: '#D4AF37',
-        lightGreen: '#F3E5AB',
-        darkGreen: '#AA8C2C',
-        lightBg: '#F9F9F9',
-        border: '#E5E5E5',
+        accent: '#B8860B',  // Flyer Gold
         gold: {
-          DEFAULT: '#D4AF37',
-          light: '#F3E5AB',
-          dark: '#AA8C2C',
+          DEFAULT: '#B8860B',
+          light: '#D4AF37',
+          dark: '#8B6914',
         },
+        muted: '#F0F4F2',
+        border: '#E2E8E4',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Inter', 'sans-serif'], // Replacing serif with sans-serif as requested
       },
     },
   },
