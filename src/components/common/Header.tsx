@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex items-center gap-6">
              <Link
               href="/contact"
-              className="hidden lg:flex px-8 py-3 bg-gold text-white rounded-xl font-black text-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 shadow-[0_10px_30px_rgba(16,185,129,0.2)]"
+              className="hidden lg:flex px-8 py-3 bg-gold text-primary rounded-xl font-black text-sm uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.2)]"
             >
               Initiate Discovery
             </Link>
