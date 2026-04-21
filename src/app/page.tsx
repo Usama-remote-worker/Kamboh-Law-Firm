@@ -136,8 +136,8 @@ export default function Home() {
       </section>
 
       {/* Trust Signals & Accreditations */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
-        <div className="absolute inset-0 opacity-10">
+      <section className="py-24 bg-white text-primary overflow-hidden relative border-y border-border">
+        <div className="absolute inset-0 opacity-[0.03]">
            <div className="grid grid-cols-8 gap-10">
              {Array.from({length: 40}).map((_, i) => (
                <ShieldCheck key={i} className="w-12 h-12" />
@@ -148,16 +148,16 @@ export default function Home() {
         <Container>
            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
               <div className="max-w-xl text-center lg:text-left">
-                <h2 className="text-3xl md:text-[32px] font-bold text-white mb-8 border-l-4 border-gold pl-6">Accreditations & Certificates</h2>
-                <p className="text-lg text-gray-300 font-medium leading-relaxed mb-10">
+                <h2 className="text-3xl md:text-[32px] font-bold text-primary mb-8 border-l-4 border-gold pl-6">Accreditations & Certificates</h2>
+                <p className="text-lg text-gray-500 font-medium leading-relaxed mb-10">
                   Kamboh Associates is a fully recognized and authorized tax practice firm. We adhere to the stringent compliance standards of the FBR and SECP.
                 </p>
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
-                   <div className="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                   <div className="px-8 py-4 bg-muted border border-border rounded-2xl flex items-center gap-4">
                      <Award className="w-6 h-6 text-gold" />
                      <span className="font-bold uppercase tracking-widest text-xs">FBR Authorized</span>
                    </div>
-                   <div className="px-8 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                   <div className="px-8 py-4 bg-muted border border-border rounded-2xl flex items-center gap-4">
                      <Globe className="w-6 h-6 text-gold" />
                      <span className="font-bold uppercase tracking-widest text-xs">SECP Registered</span>
                    </div>
@@ -165,11 +165,11 @@ export default function Home() {
               </div>
               
               <div className="grid grid-cols-2 gap-8">
-                 <div className="bg-white/95 p-4 rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                 <div className="bg-white p-4 rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 border border-border">
                     <img src="/cert_placeholder_1.jpg" alt="FBR Certificate Kamboh Associates Lahore" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
                     <div className="mt-3 text-center text-[10px] font-black text-primary uppercase">NTN Certification</div>
                  </div>
-                 <div className="bg-white/95 p-4 rounded-2xl shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500 mt-12">
+                 <div className="bg-white p-4 rounded-2xl shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500 mt-12 border border-border">
                     <img src="/cert_placeholder_2.jpg" alt="SECP Certification Kamboh Associates" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
                     <div className="mt-3 text-center text-[10px] font-black text-primary uppercase">STRN Registration</div>
                  </div>
@@ -212,14 +212,14 @@ export default function Home() {
 
       {/* Final Brand CTA */}
       <section className="py-24 md:py-40 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-fixed">
-        <div className="bg-primary/90 py-24 md:py-40">
+        <div className="bg-white/95 py-24 md:py-40 backdrop-blur-sm border-y-4 border-gold">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
-               <span className="text-gold font-black uppercase tracking-[0.4em] text-xs mb-8 block">Your Regulatory Advantage</span>
-               <h2 className="text-4xl md:text-[56px] font-bold text-white mb-10 leading-tight">Master Your <span className="text-gold">Financial</span> Sovereignty</h2>
-               <p className="text-xl text-gray-300 mb-12 font-medium">Join 5,000+ elite business owners who trust Kamboh Associates.</p>
+               <span className="text-gold-dark font-black uppercase tracking-[0.4em] text-xs mb-8 block">Your Regulatory Advantage</span>
+               <h2 className="text-4xl md:text-[56px] font-bold text-primary mb-10 leading-tight">Master Your <span className="text-gold-dark">Financial</span> Sovereignty</h2>
+               <p className="text-xl text-gray-600 mb-12 font-medium">Join 5,000+ elite business owners who trust Kamboh Associates.</p>
                <Link href="/contact">
-                 <Button size="lg" className="bg-gold text-white hover:bg-white hover:text-primary px-16 py-8 rounded-2xl text-xl font-bold shadow-2xl">Initiate Strategic Review</Button>
+                 <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-16 py-8 rounded-2xl text-xl font-bold shadow-2xl shadow-primary/20">Initiate Strategic Review</Button>
                </Link>
             </div>
           </Container>

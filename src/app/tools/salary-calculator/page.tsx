@@ -45,20 +45,20 @@ export default function SalaryCalculatorPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary text-white py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section className="bg-white text-primary py-16 md:py-24 relative overflow-hidden border-b border-border">
+        <div className="absolute inset-0 opacity-[0.05]">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gold rounded-full filter blur-[120px]" />
         </div>
         <Container>
           <div className="relative z-10 max-w-3xl">
-            <Link href="/tools" className="inline-flex items-center gap-2 text-gold text-sm font-bold uppercase tracking-widest mb-6 hover:text-white transition-colors">
-              ← All Tools
+            <Link href="/tools" className="inline-flex items-center gap-2 text-gold-dark text-sm font-bold uppercase tracking-widest mb-6 hover:text-primary transition-colors">
+              ← Intelligence Hub
             </Link>
-            <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
-              Salary Tax <span className="gradient-text">Calculator</span>
+            <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight text-primary">
+              Salary Tax <span className="text-gold-dark">Calculator</span>
             </h1>
-            <p className="text-xl text-gray-400 font-medium">
-              Instantly compute your income tax using <strong className="text-white">FBR 2025-26</strong> official tax slabs. Free & accurate.
+            <p className="text-xl text-gray-500 font-medium">
+              Instantly compute your income tax using <strong className="text-primary font-black">FBR 2025-26</strong> official tax slabs. Free & accurate.
             </p>
           </div>
         </Container>
@@ -227,16 +227,16 @@ export default function SalaryCalculatorPage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 text-center bg-primary rounded-[3rem] p-16 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
+          <div className="mt-16 text-center bg-white border-2 border-primary rounded-[3rem] p-16 relative overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 opacity-[0.03]">
               <div className="absolute top-0 right-0 w-64 h-64 bg-gold rounded-full filter blur-3xl" />
             </div>
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-black text-white mb-4">Need Tax Optimization?</h3>
-              <p className="text-gray-400 text-lg font-medium mb-8">Our expert chartered accountants can help you legally reduce your tax liability.</p>
+              <h3 className="text-3xl md:text-4xl font-black text-primary mb-4">Need Tax Optimization?</h3>
+              <p className="text-gray-500 text-lg font-medium mb-8">Our expert chartered accountants can help you legally reduce your tax liability.</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 bg-gold text-primary px-10 py-5 rounded-2xl font-black text-lg hover:bg-white transition-all duration-300"
+                className="inline-flex items-center gap-3 bg-primary text-white px-10 py-5 rounded-2xl font-black text-lg hover:bg-gold hover:text-primary transition-all duration-300 shadow-xl shadow-primary/20"
               >
                 Book Free Consultation <ArrowRight className="w-5 h-5" />
               </Link>

@@ -24,18 +24,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-primary text-white py-24 md:py-40 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full mix-blend-screen filter blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold rounded-full mix-blend-screen filter blur-3xl"></div>
+      <section className="relative bg-white text-primary py-24 md:py-40 overflow-hidden border-b border-border">
+        <div className="absolute inset-0 opacity-[0.05]">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold rounded-full mix-blend-multiply filter blur-3xl"></div>
         </div>
         <Container>
           <div className="relative z-10 text-center max-w-4xl mx-auto">
-            <span className="text-gold font-black uppercase tracking-[0.4em] text-sm mb-6 block">Our Heritage & Vision</span>
-            <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tight">
-              Kamboh <span className="gradient-text">Associates</span>
+            <span className="text-gold-dark font-black uppercase tracking-[0.4em] text-sm mb-6 block">Our Heritage & Vision</span>
+            <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tight text-primary">
+              Kamboh <span className="text-gold-dark">Associates</span>
             </h1>
-            <p className="text-xl md:text-3xl text-gray-400 font-medium leading-relaxed">
+            <p className="text-xl md:text-3xl text-gray-500 font-medium leading-relaxed">
               Pakistan&apos;s premier advisory for regulatory excellence and financial strategic growth.
             </p>
           </div>
@@ -79,24 +79,24 @@ export default function AboutPage() {
       </section>
 
       {/* Strategic Pillars */}
-      <section className="py-24 md:py-36 bg-primary text-white">
+      <section className="py-24 md:py-36 bg-white border-y border-border">
         <Container>
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-black mb-6">Our Strategic Pillars</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-primary mb-6">Our Strategic Pillars</h2>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="p-12 rounded-[3rem] bg-white/5 border border-white/10 hover:border-gold transition-all duration-500">
+            <div className="p-12 rounded-[3rem] bg-muted/30 border border-border hover:border-gold transition-all duration-500">
               <Target className="w-16 h-16 text-gold mb-8" />
-              <h3 className="text-4xl font-black mb-6">The Mission</h3>
-              <p className="text-xl text-gray-400 font-medium leading-relaxed">
+              <h3 className="text-4xl font-black text-primary mb-6">The Mission</h3>
+              <p className="text-xl text-gray-600 font-medium leading-relaxed">
                 To institutionalize financial literacy and regulatory ease across Pakistan, ensuring every corporate and individual entity achieves peak compliance with minimal friction.
               </p>
             </div>
-            <div className="p-12 rounded-[3rem] bg-white/5 border border-white/10 hover:border-gold transition-all duration-500">
+            <div className="p-12 rounded-[3rem] bg-muted/30 border border-border hover:border-gold transition-all duration-500">
               <Lightbulb className="w-16 h-16 text-gold mb-8" />
-              <h3 className="text-4xl font-black mb-6">The Vision</h3>
-              <p className="text-xl text-gray-400 font-medium leading-relaxed">
+              <h3 className="text-4xl font-black text-primary mb-6">The Vision</h3>
+              <p className="text-xl text-gray-600 font-medium leading-relaxed">
                 To become the undisputed sovereign entity for digital regulatory advisory in Pakistan, setting world-class benchmarks for transparency and technological integration.
               </p>
             </div>
@@ -178,21 +178,21 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-48">
+      <section className="py-24 md:py-48 bg-white overflow-hidden">
         <Container>
-          <div className="bg-primary rounded-[3.5rem] p-16 md:p-32 text-center relative overflow-hidden">
-             <div className="absolute top-0 left-0 p-10 opacity-5">
+          <div className="bg-white border-4 border-primary rounded-[3.5rem] p-16 md:p-32 text-center relative overflow-hidden shadow-2xl">
+             <div className="absolute top-0 left-0 p-10 opacity-[0.03]">
                <ShieldCheck className="w-[40rem] h-[40rem] text-gold" />
              </div>
              <div className="relative z-10">
-                <h2 className="text-4xl md:text-7xl font-black text-white mb-8 tracking-tight">Institutional Excellence <br /> <span className="text-gold">Begins Here</span></h2>
-                <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto font-medium">Secure your entity&apos;s financial future with the most trusted advisory in Pakistan.</p>
+                <h2 className="text-4xl md:text-7xl font-black text-primary mb-8 tracking-tight">Institutional Excellence <br /> <span className="text-gold-dark">Begins Here</span></h2>
+                <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto font-medium">Secure your entity&apos;s financial future with the most trusted advisory in Pakistan.</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <Link href="/contact">
-                    <Button size="lg" className="bg-gold text-primary hover:bg-white px-12 py-8 rounded-2xl text-xl font-bold">Initiate Discovery</Button>
+                    <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-12 py-8 rounded-2xl text-xl font-bold">Initiate Discovery</Button>
                   </Link>
                   <Link href="/services">
-                    <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-12 py-8 rounded-2xl text-xl font-bold">Our Strategies</Button>
+                    <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-muted px-12 py-8 rounded-2xl text-xl font-bold">Our Strategies</Button>
                   </Link>
                 </div>
              </div>

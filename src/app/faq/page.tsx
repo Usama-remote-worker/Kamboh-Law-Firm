@@ -86,17 +86,17 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-primary text-white py-24 md:py-40 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.15]">
+      <section className="relative bg-white text-primary py-24 md:py-40 overflow-hidden border-b border-border">
+        <div className="absolute inset-0 opacity-[0.05]">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold rounded-full filter blur-[150px]"></div>
         </div>
         <Container>
           <div className="relative z-10 text-center max-w-4xl mx-auto">
-             <span className="text-gold font-black uppercase tracking-[0.4em] text-sm mb-6 block">Knowledge Base</span>
-            <h1 className="text-5xl md:text-8xl font-black mb-10 leading-tight tracking-tight">
-              Regulatory <span className="gradient-text">Intelligence</span>
+             <span className="text-gold-dark font-black uppercase tracking-[0.4em] text-sm mb-6 block">Knowledge Base</span>
+            <h1 className="text-5xl md:text-8xl font-black mb-10 leading-tight tracking-tight text-primary">
+              Regulatory <span className="text-gold-dark">Intelligence</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 font-medium leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed">
               Transparent answers to complex tax, legal, and corporate mandates in Pakistan.
             </p>
           </div>
@@ -141,25 +141,25 @@ export default function FAQPage() {
       </section>
 
       {/* Still Have Questions */}
-      <section className="py-24 md:py-48 bg-primary">
+      <section className="py-24 md:py-48 bg-white overflow-hidden">
         <Container>
-          <div className="bg-white/5 border border-white/10 rounded-[4rem] p-16 md:p-32 text-center relative overflow-hidden">
-            <div className="absolute -bottom-20 -right-20 opacity-5">
+          <div className="bg-white border-2 border-primary rounded-[4rem] p-16 md:p-32 text-center relative overflow-hidden shadow-2xl">
+            <div className="absolute -bottom-20 -right-20 opacity-[0.03]">
                <MessageSquare className="w-[40rem] h-[40rem] text-gold" />
             </div>
             <div className="relative z-10 max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-8">Unresolved <span className="text-gold">Mandates</span>?</h2>
-              <p className="text-xl text-gray-400 mb-12 font-medium">
+              <h2 className="text-4xl md:text-6xl font-black text-primary mb-8">Unresolved <span className="text-gold-dark">Mandates</span>?</h2>
+              <p className="text-xl text-gray-500 mb-12 font-medium">
                 Our senior legal consultants are available for direct discovery calls to address your specific entity requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-gold text-primary hover:bg-white px-12 py-8 rounded-2xl text-xl font-black shadow-2xl shadow-gold/20">
+                  <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-12 py-8 rounded-2xl text-xl font-black shadow-2xl shadow-primary/20">
                     Consult an Expert <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-12 py-8 rounded-2xl text-xl font-bold">
+                  <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-muted px-12 py-8 rounded-2xl text-xl font-bold">
                     View Advisory Portfolio
                   </Button>
                 </Link>

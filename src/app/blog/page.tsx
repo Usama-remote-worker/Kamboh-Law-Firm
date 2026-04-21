@@ -93,7 +93,7 @@ export default function InsightsPage() {
   return (
     <>
       {/* Premium Hero */}
-      <section className="relative bg-primary text-white py-24 md:py-36 overflow-hidden">
+      <section className="relative bg-white text-primary py-24 md:py-36 overflow-hidden border-b border-border">
         <div className="absolute inset-0 opacity-[0.1]">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold rounded-full filter blur-[150px]" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-dark rounded-full filter blur-[120px]" />
@@ -101,10 +101,10 @@ export default function InsightsPage() {
         <Container>
           <div className="relative z-10 max-w-4xl">
             <span className="text-gold font-black uppercase tracking-[0.4em] text-xs mb-6 block">Intelligence Hub</span>
-            <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[1.05] tracking-tight">
-              Strategic <span className="text-gold">Insights</span> & Compliance
+            <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[1.05] tracking-tight text-primary">
+              Strategic <span className="text-gold-dark">Insights</span> & Compliance
             </h1>
-            <p className="text-xl text-gray-400 font-medium max-w-2xl">
+            <p className="text-xl text-gray-500 font-medium max-w-2xl">
               Professional-grade intelligence for the elite. Stay ahead of FBR regulations with curated advisory from Pakistan's leading consultants.
             </p>
           </div>
@@ -215,29 +215,26 @@ export default function InsightsPage() {
       </section>
 
       {/* Newsletter - Premium Version */}
-      <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gold-dark rounded-full filter blur-[180px]" />
-        </div>
+      <section className="py-24 bg-white relative overflow-hidden">
         <Container>
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-[4rem] p-12 md:p-24 shadow-2xl">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center bg-white border-2 border-primary rounded-[4rem] p-12 md:p-24 shadow-2xl">
             <div>
                <Briefcase className="w-12 h-12 text-gold mb-8" />
-               <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">Secure Your <span className="text-gold">Corporate</span> Edge</h2>
-               <p className="text-xl text-gray-400 font-medium">Join 5,000+ business leaders receiving our monthly compliance digest.</p>
+               <h2 className="text-4xl md:text-6xl font-black text-primary mb-6 leading-tight">Secure Your <span className="text-gold-dark">Corporate</span> Edge</h2>
+               <p className="text-xl text-gray-600 font-medium">Join 5,000+ business leaders receiving our monthly compliance digest.</p>
             </div>
             <div className="space-y-6">
               <div className="relative">
                 <input
                   type="email"
                   placeholder="Official Email Address"
-                  className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-8 py-6 text-white text-lg font-bold focus:outline-none focus:border-gold transition-all"
+                  className="w-full bg-muted border-2 border-border rounded-2xl px-8 py-6 text-primary text-lg font-bold focus:outline-none focus:border-gold transition-all"
                 />
               </div>
-              <button className="w-full bg-gold text-primary py-6 rounded-2xl font-black text-sm uppercase tracking-[0.3em] hover:bg-white hover:text-primary transition-all duration-500 shadow-xl shadow-gold/20">
+              <button className="w-full bg-primary text-white py-6 rounded-2xl font-black text-sm uppercase tracking-[0.3em] hover:bg-gold hover:text-primary transition-all duration-500 shadow-xl shadow-primary/20">
                 Subscribe to Intelligence
               </button>
-              <div className="flex items-center gap-3 text-gray-500 text-xs font-bold uppercase tracking-widest">
+              <div className="flex items-center gap-3 text-gray-400 text-xs font-bold uppercase tracking-widest">
                 <ShieldCheck className="w-4 h-4 text-gold" /> End-to-End Data Encryption Active
               </div>
             </div>

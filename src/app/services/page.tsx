@@ -9,17 +9,17 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-primary text-white py-24 md:py-36 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.15]">
+      <section className="relative bg-white text-primary py-24 md:py-36 overflow-hidden border-b border-border">
+        <div className="absolute inset-0 opacity-[0.05]">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold rounded-full filter blur-[150px]" />
         </div>
         <Container>
           <div className="relative z-10 max-w-3xl">
-            <span className="text-gold font-black uppercase tracking-[0.3em] text-xs mb-4 block">Complete Advisory Portfolio</span>
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight">
-              Tax & Business <br /><span className="gradient-text">Services</span>
+            <span className="text-gold-dark font-black uppercase tracking-[0.3em] text-xs mb-4 block">Complete Advisory Portfolio</span>
+            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight text-primary">
+              Tax & Business <br /><span className="text-gold-dark">Excellence</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-400 font-medium">
+            <p className="text-xl md:text-2xl text-gray-500 font-medium">
               FBR-compliant solutions for individuals, SMEs & corporations — all under one roof in Lahore.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function ServicesPage() {
                       key={service.id}
                       className={`relative rounded-[2.5rem] p-10 border-2 flex flex-col transition-all duration-500 ${
                         service.popular
-                          ? 'bg-primary border-gold shadow-[0_20px_60px_rgba(212,175,55,0.15)]'
+                          ? 'bg-white border-gold shadow-[0_20px_60px_rgba(212,175,55,0.15)]'
                           : 'bg-white border-border hover:border-gold/40 hover:shadow-xl hover:shadow-gold/5'
                       }`}
                     >
@@ -62,10 +62,10 @@ export default function ServicesPage() {
 
                       <IconComponent className={`w-12 h-12 mb-8 ${service.popular ? 'text-gold' : 'text-gold-dark'}`} />
 
-                      <h3 className={`text-2xl font-black mb-4 ${service.popular ? 'text-white' : 'text-primary'}`}>
+                      <h3 className={`text-2xl font-black mb-4 text-primary`}>
                         {service.name}
                       </h3>
-                      <p className={`font-medium mb-8 leading-relaxed flex-1 ${service.popular ? 'text-gray-400' : 'text-gray-600'}`}>
+                      <p className={`font-medium mb-8 leading-relaxed flex-1 text-gray-600`}>
                         {service.description}
                       </p>
 
@@ -73,7 +73,7 @@ export default function ServicesPage() {
                         {service.features.map((feature, j) => (
                           <div key={j} className="flex items-center gap-3">
                             <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
-                            <span className={`text-sm font-semibold ${service.popular ? 'text-gray-300' : 'text-gray-600'}`}>
+                            <span className={`text-sm font-semibold text-gray-600`}>
                               {feature}
                             </span>
                           </div>
@@ -84,8 +84,8 @@ export default function ServicesPage() {
                         <Button
                           className={`w-full py-4 font-black rounded-2xl transition-all duration-300 ${
                             service.popular
-                              ? 'bg-gold text-primary hover:bg-white'
-                              : 'bg-primary text-white hover:bg-gold'
+                              ? 'bg-gold text-primary hover:bg-primary hover:text-white'
+                              : 'bg-primary text-white hover:bg-gold hover:text-primary'
                           }`}
                         >
                           Get Started <ArrowRight className="inline w-4 h-4 ml-1" />
@@ -126,13 +126,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-36 bg-primary">
+      <section className="py-24 md:py-36 bg-white border-t border-border">
         <Container>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-7xl font-black text-white mb-10">Strategic <span className="gradient-text">Engagement</span></h2>
-            <p className="text-xl text-gray-400 mb-12 font-medium">Discuss your regulatory requirements with Pakistan&apos;s trusted advisory.</p>
+            <h2 className="text-4xl md:text-7xl font-black text-primary mb-10 leading-tight">Strategic <span className="text-gold-dark">Engagement</span></h2>
+            <p className="text-xl text-gray-500 mb-12 font-medium">Discuss your regulatory requirements with Pakistan&apos;s trusted advisory.</p>
             <Link href="/contact">
-              <Button className="bg-gold text-primary hover:bg-white px-12 py-6 rounded-2xl text-xl font-black transition-all duration-300">
+              <Button className="bg-primary text-white hover:bg-gold hover:text-primary px-12 py-6 rounded-2xl text-xl font-black transition-all duration-300 shadow-xl shadow-primary/10">
                 Initiate Discovery Call
               </Button>
             </Link>
