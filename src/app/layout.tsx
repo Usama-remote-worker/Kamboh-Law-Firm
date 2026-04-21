@@ -16,13 +16,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   icons: {
     icon: [
-      { url: '/icon.png' },
-      { url: '/logo.png' },
-      { url: '/favicon.ico' },
-      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/kamboh-core-icon.png' },
+      { url: '/kamboh-core-icon.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-icon.png' },
+      { url: '/kamboh-core-icon.png' },
     ],
   },
 };
