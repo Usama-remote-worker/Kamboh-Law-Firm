@@ -109,7 +109,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { icon: Award, title: 'FBR Authorized', desc: 'Active, high-priority integrations with FBR & SECP for direct submission.' },
+              { icon: Award, title: 'FBR Certified', desc: 'Active, high-priority integrations with FBR & SECP for direct submission.' },
               { icon: ShieldCheck, title: 'Data Sovereignty', desc: 'Bank-grade AES-256 encryption. Your financial data stays private.' },
               { icon: Clock, title: '24-48 Hour SLA', desc: 'Automated workflows deliver results in under 48 hours after document receipt.' },
             ].map((item, i) => (
@@ -133,7 +133,7 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-500 mb-12 font-medium">Discuss your regulatory requirements with Pakistan&apos;s trusted advisory.</p>
             <Link href="/contact">
               <Button className="bg-primary text-white hover:bg-gold hover:text-primary px-12 py-6 rounded-2xl text-xl font-black transition-all duration-300 shadow-xl shadow-primary/10">
-                Initiate Discovery Call
+                Initiate Consultation
               </Button>
             </Link>
           </div>

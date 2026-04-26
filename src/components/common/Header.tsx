@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { SITE_NAME, SHOP_ADDRESS } from '@/lib/constants';
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Tools', path: '/tools' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
   return (
     <header className={`sticky top-0 z-50 transition-all duration-500 ${
       scrolled 
@@ -27,29 +36,18 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-4 group">
-            <div className="w-14 h-14 relative group-hover:scale-110 transition-transform duration-500 bg-white rounded-full p-1">
-              <img 
-                src="/logo.png" 
-                alt={SITE_NAME}
-                className="w-full h-full object-contain"
-              />
+            <div className="group-hover:scale-110 transition-transform duration-500">
+              <Logo size={60} />
             </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-black text-white tracking-tight">{SITE_NAME}</span>
-              <span className="text-[10px] font-black text-gold uppercase tracking-[0.3em]">Authorized Regulatory Advisory</span>
+              <span className="text-2xl font-black text-white tracking-tight leading-none mb-1">{SITE_NAME}</span>
+              <span className="text-[10px] font-black text-gold uppercase tracking-[0.3em]">Regulatory Advisory Excellence</span>
             </div>
           </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {[
-              { name: 'Home', path: '/' },
-              { name: 'Advisory', path: '/services' },
-              { name: 'Strategic Hub', path: '/tools' },
-              { name: 'Insights', path: '/blog' },
-              { name: 'About', path: '/about' },
-              { name: 'Contact', path: '/contact' },
-            ].map((item) => (
+            {navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
@@ -77,7 +75,7 @@ export default function Header() {
               href="/contact"
               className="hidden lg:flex px-8 py-3 bg-gold text-primary rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300 shadow-xl shadow-gold/20"
             >
-              Initiate Discovery
+              Consult an Expert
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -93,14 +91,7 @@ export default function Header() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mt-6 pb-10 space-y-4 animate-in fade-in slide-in-from-top-4 duration-300 bg-primary">
-            {[
-              { name: 'Home', path: '/' },
-              { name: 'Services', path: '/services' },
-              { name: 'Tools', path: '/tools' },
-              { name: 'Blog', path: '/blog' },
-              { name: 'About', path: '/about' },
-              { name: 'Contact', path: '/contact' },
-            ].map((item) => (
+            {navLinks.map((item) => (
               <Link 
                 key={item.name}
                 href={item.path} 

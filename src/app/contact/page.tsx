@@ -58,7 +58,7 @@ export default function ContactPage() {
         <Container>
           <div className="relative z-10 text-center max-w-3xl mx-auto">
              <span className="text-gold-dark font-black uppercase tracking-[0.3em] text-xs mb-4 block">Direct Engagement</span>
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight text-primary">Initiate <span className="text-gold-dark">Discovery</span></h1>
+            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight text-primary">Initiate <span className="text-gold-dark">Consultation</span></h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium">
               Discuss your regulatory and financial mandates with Pakistan&apos;s leading advisory firm.
             </p>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                  <div className="relative z-10">
                    <h3 className="text-2xl font-black mb-3">Priority Compliance Support</h3>
                    <p className="text-gray-500 font-medium mb-8 max-w-sm">
-                     Urgent tax audit or FBR notice? Our legal team is standing by for prioritized discovery.
+                     Urgent tax audit or FBR notice? Our legal team is standing by for prioritized consultation.
                    </p>
                    <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-10 rounded-xl font-black transition-all">
                      Initiate Priority Case
@@ -221,10 +221,10 @@ export default function ContactPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              { q: 'What is the standard SLA for return filing?', a: 'High-priority private client filings are typically authorized and submitted to the FBR within 24-48 hours post-documentation.' },
+              { q: 'What is the standard SLA for return filing?', a: 'High-priority private client filings are typically processed and submitted to the FBR within 24-48 hours post-documentation.' },
               { q: 'Is client confidentiality protocols in place?', a: 'Absolute sovereignty. We employ bank-grade AES-256 encryption and legal non-disclosure agreements for all engagements.' },
               { q: 'Do you offer recursive monthly retainerships?', a: 'Yes. We provide tiered retainership models for corporate accounting, payroll, and continuous tax optimization.' },
-              { q: 'Are you authorized by FBR and SECP?', a: 'Kamboh Associates is an officially registered and authorized consultant firm with direct integration portals for both FBR and SECP.' },
+              { q: 'Are you recognized by FBR and SECP?', a: 'Kamboh Associates is an officially registered and recognized consultant firm with direct integration portals for both FBR and SECP.' },
             ].map((item, i) => (
               <div key={i} className="flex gap-6 p-10 rounded-[2.5rem] bg-white border border-border group hover:border-gold/30 transition-all duration-500">
                 <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">

@@ -144,7 +144,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 {[
                   { name: 'FBR Integration', desc: 'Direct secure-token access for expedited tax submissions.' },
-                  { name: 'SECP Compliance', desc: 'Authorized digital consultant for tiered company formation.' },
+                  { name: 'SECP Compliance', desc: 'Certified digital consultant for tiered company formation.' },
                   { name: 'PRRA Registered', desc: 'Strict adherence to provincial regulatory protocols.' },
                   { name: 'Data Sovereignty', desc: 'Bank-grade AES-256 encryption protocol for all client data.' }
                 ].map((item, i) => (
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto font-medium">Secure your entity&apos;s financial future with the most trusted advisory in Pakistan.</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <Link href="/contact">
-                    <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-12 py-8 rounded-2xl text-xl font-bold">Initiate Discovery</Button>
+                    <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-12 py-8 rounded-2xl text-xl font-bold">Consult an Expert</Button>
                   </Link>
                   <Link href="/services">
                     <Button size="lg" variant="outline" className="border-primary/20 text-primary hover:bg-muted px-12 py-8 rounded-2xl text-xl font-bold">Our Strategies</Button>

@@ -36,7 +36,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold tracking-tight">{SITE_NAME}</h3>
             </div>
             <p className="text-base text-gray-600 font-medium leading-relaxed">
-              Pakistan&apos;s trusted tax & legal advisory. Authorized FBR firm serving Lahore since 2008.
+              Pakistan&apos;s trusted tax & legal advisory. Recognized FBR firm serving Lahore since 2008.
             </p>
             <div className="space-y-4 pt-2">
               <div className="flex items-start gap-4 group">
@@ -126,7 +126,7 @@ export default function Footer() {
                </div>
                <div className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-gold/40" />
-                  <span className="text-[10px] font-black uppercase tracking-widest text-white/40">FBR Authorized</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/40">FBR Certified</span>
                </div>
             </div>
             

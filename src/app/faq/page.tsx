@@ -31,7 +31,7 @@ export default function FAQPage() {
         },
         {
           q: 'How does Kamboh Associates integrate with the FBR IRIS portal?',
-          a: 'We utilize authorized, secure-token protocols for direct integration, allowing for expedited verification and near-instant acknowledgement of filings.',
+          a: 'We utilize secure-token protocols for direct integration, allowing for expedited verification and near-instant acknowledgement of filings.',
         },
       ],
     },
@@ -77,7 +77,7 @@ export default function FAQPage() {
         },
         {
           q: 'Is Kamboh Associates an officially registered firm?',
-          a: 'Yes. Kamboh Associates is an authorized regulatory advisory firm with active credentials from FBR, SECP, and relevant provincial tax boards.',
+          a: 'Yes. Kamboh Associates is a recognized regulatory advisory firm with active credentials from FBR, SECP, and relevant provincial tax boards.',
         },
       ],
     },
@@ -150,7 +150,7 @@ export default function FAQPage() {
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-4xl md:text-6xl font-black text-primary mb-8">Unresolved <span className="text-gold-dark">Mandates</span>?</h2>
               <p className="text-xl text-gray-500 mb-12 font-medium">
-                Our senior legal consultants are available for direct discovery calls to address your specific entity requirements.
+                Our senior legal consultants are available for direct consultations to address your specific entity requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="/contact">

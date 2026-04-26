@@ -72,7 +72,7 @@ export default function Home() {
                <div className="absolute -inset-10 bg-gold/10 rounded-full filter blur-[80px]"></div>
                <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_rgba(0,57,36,0.15)] border-8 border-white">
                   <img 
-                    src="/flyer_mockup.jpg" 
+                    src="/hero-professional.png" 
                     alt="Kamboh Associates Tax Consultant Lahore" 
                     className="w-full h-auto object-cover" 
                     onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1554224155-169641357599?auto=format&fit=crop&q=80&w=1000'}
@@ -150,12 +150,12 @@ export default function Home() {
               <div className="max-w-xl text-center lg:text-left">
                 <h2 className="text-3xl md:text-[32px] font-bold text-primary mb-8 border-l-4 border-gold pl-6">Accreditations & Certificates</h2>
                 <p className="text-lg text-gray-500 font-medium leading-relaxed mb-10">
-                  Kamboh Associates is a fully recognized and authorized tax practice firm. We adhere to the stringent compliance standards of the FBR and SECP.
+                  Kamboh Associates is a fully recognized tax practice firm. We adhere to the stringent compliance standards of the FBR and SECP.
                 </p>
                 <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
                    <div className="px-8 py-4 bg-muted border border-border rounded-2xl flex items-center gap-4">
                      <Award className="w-6 h-6 text-gold" />
-                     <span className="font-bold uppercase tracking-widest text-xs">FBR Authorized</span>
+                     <span className="font-bold uppercase tracking-widest text-xs">FBR Certified</span>
                    </div>
                    <div className="px-8 py-4 bg-muted border border-border rounded-2xl flex items-center gap-4">
                      <Globe className="w-6 h-6 text-gold" />
@@ -166,11 +166,11 @@ export default function Home() {
               
               <div className="grid grid-cols-2 gap-8">
                  <div className="bg-white p-4 rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 border border-border">
-                    <img src="/cert_placeholder_1.jpg" alt="FBR Certificate Kamboh Associates Lahore" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
+                    <img src="/cert-fbr.png" alt="FBR Certificate Kamboh Associates Lahore" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
                     <div className="mt-3 text-center text-[10px] font-black text-primary uppercase">NTN Certification</div>
                  </div>
                  <div className="bg-white p-4 rounded-2xl shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500 mt-12 border border-border">
-                    <img src="/cert_placeholder_2.jpg" alt="SECP Certification Kamboh Associates" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
+                    <img src="/cert-secp.png" alt="SECP Certification Kamboh Associates" className="w-48 h-64 object-cover rounded-lg border border-gold/20" onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1589330694653-93d39546059c?auto=format&fit=crop&q=80&w=400'} />
                     <div className="mt-3 text-center text-[10px] font-black text-primary uppercase">STRN Registration</div>
                  </div>
               </div>
@@ -219,7 +219,7 @@ export default function Home() {
                <h2 className="text-4xl md:text-[56px] font-bold text-primary mb-10 leading-tight">Master Your <span className="text-gold-dark">Financial</span> Sovereignty</h2>
                <p className="text-xl text-gray-600 mb-12 font-medium">Join 5,000+ elite business owners who trust Kamboh Associates.</p>
                <Link href="/contact">
-                 <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-16 py-8 rounded-2xl text-xl font-bold shadow-2xl shadow-primary/20">Initiate Strategic Review</Button>
+                 <Button size="lg" className="bg-primary text-white hover:bg-gold hover:text-primary px-16 py-8 rounded-2xl text-xl font-bold shadow-2xl shadow-primary/20">Consult an Expert</Button>
                </Link>
             </div>
           </Container>
